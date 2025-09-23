@@ -1,0 +1,269 @@
+/* style.css — responsive one-page portfolio template */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0
+}
+
+:root {
+  --ink: #222;
+  --muted: #666;
+  --paper: #fff;
+  --brand: #ff7aa2;
+  --brand-2: #eafd95;
+  --accent: #00bfff;
+  --chip: #fa9bab;
+  --bg: #f7d2d8;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+html,
+body {
+  height: 100%
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  padding-top: 64px;
+  /* room for fixed navbar */
+}
+
+/* ---------- Navbar (always visible) ---------- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--brand-2);
+  border-bottom: 1px solid #ddd;
+}
+
+.nav-container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  gap: 20px;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: .4px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+  background: #fff;
+}
+
+/* Mobile nav — simple stack (no JS) */
+@media (max-width: 640px) {
+  .nav-container {
+    flex-wrap: wrap
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* ---------- Sections ---------- */
+.section {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(22px, 3.5vw, 32px);
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* About */
+.profile-pic {
+  width: min(260px, 60vw);
+  height: auto;
+  border-radius: 80px;
+  margin: 10px auto 16px;
+  display: block;
+  box-shadow: var(--shadow);
+}
+
+.decorated {
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  max-width: 100%;
+}
+
+/* Showcase */
+.gallery {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.gallery figure {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: var(--shadow)
+}
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact / icons */
+.icons {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.icons a {
+  display: inline-block;
+}
+
+.icons img {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+a.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  margin: 6px;
+  background: var(--chip);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+a.btn:hover {
+  background: #e66b86;
+}
+
+/* ---------- Home (chooser) ---------- */
+.index-bg {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .65), rgba(255, 255, 255, .65)),
+    url('https://c.pxhere.com/photos/1c/83/odaiba_japan_tokyo-1268931.jpg!d') center/cover no-repeat;
+}
+
+.chooser {
+  background: #fff;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  width: min(680px, 92%);
+}
+
+.chooser h1 {
+  font-size: clamp(28px, 5vw, 40px);
+  margin-bottom: 6px;
+}
+
+.chooser p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.chooser .options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 14px 16px;
+  width: 260px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  box-shadow: var(--shadow);
+}
+
+.card img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card div {
+  text-align: left;
+}
+
+.card .name {
+  font-weight: 800;
+}
+
+.card .sub {
+  color: #777;
+  font-size: .9rem;
+  margin-bottom: 8px;
+}
+
+/* Utility */
+.text-center {
+  text-align: center
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 12px;
+  flex-wrap: wrap
+}
