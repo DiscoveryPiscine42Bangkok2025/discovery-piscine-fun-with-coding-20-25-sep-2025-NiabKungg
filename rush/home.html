@@ -10,23 +10,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-light fixed-top border-bottom shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">My Portfolios</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navMain">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="ekanat.html">Ekanat</a></li>
-          <li class="nav-item"><a class="nav-link" href="supinya.html">Supinya</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar bg-light fixed-top border-bottom shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">My Portfolios</a>
+    <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
+      <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="ekanat.html">Ekanat</a></li>
+      <li class="nav-item"><a class="nav-link" href="supinya.html">Supinya</a></li>
+    </ul>
+  </div>
+</nav>
 
-  <header id="top" class="py-5 bg-body-tertiary text-center mt-nav">vvvvvvvvvvvvvvvvvvvvvvvvvvv
+  <header id="top" class="py-5 bg-body-tertiary text-center mt-nav">
     <div class="container">
       <h1 class="display-5 fw-bold">Choose a Portfolio</h1>
     </div>
@@ -77,7 +72,7 @@
     <div class="container">© 2025 My Portfolios</div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
