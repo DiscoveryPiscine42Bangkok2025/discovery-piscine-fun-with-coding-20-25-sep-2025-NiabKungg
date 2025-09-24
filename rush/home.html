@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio Selector</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body class="index-bg">
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">My Portfolios</div>
-      <ul class="nav-links">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="ekanat.html">Ekanat</a></li>
-        <li><a href="supinya.html">Supinya</a></li>
-      </ul>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-light fixed-top border-bottom shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">My Portfolios</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="ekanat.html">Ekanat</a></li>
+          <li class="nav-item"><a class="nav-link" href="supinya.html">Supinya</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <main class="chooser">
-    <h1>Choose a Portfolio</h1>
-    <p>Select a one-page portfolio to view.</p>
+  <header id="top" class="py-5 bg-body-tertiary text-center mt-nav">
+    <div class="container">
+      <h1 class="display-5 fw-bold">Choose a Portfolio</h1>
+    </div>
+  </header>
 
-    <div class="options">
-      <div class="card">
-        <img src="image/niab.jpg" alt="Ekanat avatar">
-        <div>
-          <div class="name">Ekanat Meedech</div>
-          <div class="sub">CS Student at KMITL</div>
-          <a class="btn" href="ekanat.html">View Portfolio</a>
+  <main class="py-4">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        
+        <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+          <div class="card h-100 shadow-sm">
+            <div class="row g-0 align-items-center">
+              <div class="col-4 p-3 text-center">
+                <img src="image/niab.jpg" class="rounded-circle img-fluid object-fit-cover profile-ava" alt="Ekanat avatar" />
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Ekanat Meedech</h5>
+                  <p class="card-text text-secondary small mb-3">CS Student @ KMITL</p>
+                  <a href="ekanat.html" class="btn btn-primary"><i class="bi bi-person-badge"></i> View Portfolio</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="image/jun.jpg" alt="Supinya avatar">
-        <div>
-          <div class="name">Supinya Pimpison</div>
-          <div class="sub">CS Student at KMITL</div>
-          <a class="btn" href="supinya.html">View Portfolio</a>
+        
+        <div class="col-12 col-sm-10 col-md-6 col-lg-5">
+          <div class="card h-100 shadow-sm">
+            <div class="row g-0 align-items-center">
+              <div class="col-4 p-3 text-center">
+                <img src="image/jun.jpg" class="rounded-circle img-fluid object-fit-cover profile-ava" alt="Supinya avatar" />
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title mb-1">Supinya Pimpison</h5>
+                  <p class="card-text text-secondary small mb-3">CS Student @ KMITL</p>
+                  <a href="supinya.html" class="btn btn-primary"><i class="bi bi-person-badge"></i> View Portfolio</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </main>
+
+  <footer class="py-4 text-center text-secondary small">
+    <div class="container">© 2025 My Portfolios</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
