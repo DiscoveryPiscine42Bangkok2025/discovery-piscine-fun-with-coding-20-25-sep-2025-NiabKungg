@@ -1,0 +1,74 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.card {
+  width: 320px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background: white;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.img-box {
+  padding: 0;
+}
+
+.img-profile {
+  width: 100%;
+  height: auto;
+}
+
+.username {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.desc {
+  color: gray;
+  font-size: 0.9rem;
+  padding: 5px;
+}
+
+.location {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.socials {
+  padding: 10px;
+}
+
+.socials a {
+  margin: 0 8px;
+  font-size: 1.2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  color: #0077b5; /* linkedin blue */
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: #333;
+}
